@@ -9,9 +9,12 @@ def main():
     shopping_list = []  # array (list)
     while True:
         display_menu()  # call display_menu
-        try:
-            choice = int(input("Enter your choice: "))  # choice as number
-        except ValueError:
+        choice = input("Enter your choice: ")
+
+        # convert to number for checker
+        if choice.isdigit():
+            choice = int(choice)
+        else:
             print("Invalid input. Please enter a number.")
             continue
 
@@ -41,4 +44,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
