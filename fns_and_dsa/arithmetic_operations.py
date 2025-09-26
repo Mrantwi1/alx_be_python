@@ -1,4 +1,4 @@
-def perform_operation(num1: float, num2: float, operation: str):
+def perform_operation(num1, num2, operation):
     """
     Perform a basic arithmetic operation.
 
@@ -22,3 +22,5 @@ def perform_operation(num1: float, num2: float, operation: str):
         return num1 / num2
     else:
         return "Error: Invalid operation"
+
+
