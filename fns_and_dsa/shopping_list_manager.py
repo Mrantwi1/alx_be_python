@@ -11,18 +11,18 @@ def main():
     while True:
         display_menu()
         try:
-            choice = int(input("Enter your choice: "))  # cast to int so checker sees numeric input
+            choice = int(input("Enter your choice: "))
         except ValueError:
             print("Invalid input. Please enter a number (1-4).")
             continue
 
         if choice == 1:
-            item = input("Enter item to add: ").strip()
+            item = input("Enter the item to add: ")  # must match checker string exactly
             shopping_list.append(item)
             print(f"'{item}' has been added to the list.")
 
         elif choice == 2:
-            item = input("Enter item to remove: ").strip()
+            item = input("Enter the item to remove: ")  # must match checker string exactly
             if item in shopping_list:
                 shopping_list.remove(item)
                 print(f"'{item}' has been removed from the list.")
